@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav"></div>
+    <login></login>
+    <router-view></router-view>
   </div>
 </template>
-
+<script lang="ts">
+import { Component, Vue, Watch } from "vue-property-decorator";
+import Login from "./views/login/index.vue";
+@Component({
+  components: {
+    Login
+  }
+})
+export default class App extends Vue {}
+</script>
 <style lang="less">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
