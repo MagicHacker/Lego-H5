@@ -33,7 +33,11 @@ export default class Login extends Vue {
     ]
   };
   public signIn(): void {
-    alert(1);
+    this.$router.push({ path: "" });
+    this.$message({
+      type: "success",
+      message: "登录成功"
+    });
   }
   public signUp(): void {
     alert(2);
