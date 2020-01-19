@@ -40,7 +40,7 @@ module.exports = {
   },
   // CSS的配置
   css: {
-    modules: false, // 不启用css modules
+    requireModuleExtension: true, // 不启用css modules
     extract: true, // 启用css分离插件 ExtractTextPlugin
     sourceMap: false // 关闭css sourceMap
   },
