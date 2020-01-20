@@ -41,7 +41,8 @@ module.exports = {
   // CSS的配置
   css: {
     requireModuleExtension: true, // 不启用css modules
-    extract: true, // 启用css分离插件 ExtractTextPlugin
+    // 提取 CSS 在开发环境模式下是默认不开启的，因为它和 CSS 热重载不兼容
+    // extract: false, // 启用css分离插件 ExtractTextPlugin
     sourceMap: false // 关闭css sourceMap
   },
   // 配置plugins多数使用configureWebpack
