@@ -3,7 +3,7 @@
     <el-container>
       <el-header class="main-page-header">
         <div class="header-logo">
-          <img src="../../assets/svg/lego.svg" alt="" />
+          <icon-svg :icon-class="iconClass"></icon-svg>
           Lego H5
         </div>
         <div class="header-person">
@@ -30,7 +30,9 @@ import { Component, Vue } from "vue-property-decorator";
     homePage
   }
 })
-export default class MainPage extends Vue {}
+export default class MainPage extends Vue {
+  iconClass: string = "lego";
+}
 </script>
 <style lang="less" scoped>
 .main-page-wrap {
