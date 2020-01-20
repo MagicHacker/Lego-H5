@@ -36,14 +36,14 @@ export default class Login extends Vue {
     ]
   };
   public signIn(): void {
-    this.$router.push({ path: "" });
+    this.$router.push({ path: "/mainPage" });
     this.$message({
       type: "success",
       message: "登录成功"
     });
   }
   public signUp(): void {
-    alert(2);
+    alert("暂无注册功能");
   }
 }
 </script>
