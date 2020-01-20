@@ -13,7 +13,8 @@ import {
   Aside,
   Main,
   Row,
-  Col
+  Col,
+  Popover
 } from "element-ui";
 [
   Button,
@@ -25,7 +26,8 @@ import {
   Aside,
   Main,
   Row,
-  Col
+  Col,
+  Popover
 ].forEach(item => {
   Vue.use(item);
 });

@@ -32,7 +32,14 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+}
 #nav {
   padding: 30px;
 
