@@ -71,13 +71,15 @@ module.exports = {
           parallel: true // 并行加速构建
         })
       );
+    } else {
+      config.devtool = "source-map";
     }
   },
   // 配置loaders多数使用chainWebpack
   chainWebpack: config => {
     config.resolve.alias
       .set("@", resolve("src"))
-      .set("assets", resolve("src/assets"));
+      .set("@assets", resolve("src/assets"));
     config.output.filename("js/[name].[hash:4].js").end();
   }
 };
