@@ -36,7 +36,7 @@ module.exports = {
     host: "127.0.0.1",
     port: 8089, // 端口
     https: false, // 不启用https
-    hotOnly: true // 开启模块热替换
+    hot: true // 开启模块热替换
   },
   // CSS的配置
   css: {
