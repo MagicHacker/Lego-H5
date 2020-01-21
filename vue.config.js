@@ -96,6 +96,12 @@ module.exports = {
       .options({
         symbolId: "icon-[name]"
       })
+      .end()
+      .use("svgo-loader")
+      .loader("svgo-loader")
+      .options({
+        externalConfig: "svgo-config.yml"
+      })
       .end();
   }
 };
