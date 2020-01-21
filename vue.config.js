@@ -82,5 +82,20 @@ module.exports = {
       .set("@", resolve("src"))
       .set("@assets", resolve("src/assets"));
     config.output.filename("js/[name].[hash:4].js").end();
+    config.module
+      .rule("svg")
+      .exclude.add(resolve("./src/assets/svg"))
+      .end();
+    config.module
+      .rule("icon")
+      .test(/\.svg$/)
+      .include.add(resolve("./src/assets/svg"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId: "icon-[name]"
+      })
+      .end();
   }
 };
