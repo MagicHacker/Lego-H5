@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import IconSvg from "./components/icon-svg/index.vue";
+import "./utils/icon-svg.ts";
 import {
   Button,
   Form,

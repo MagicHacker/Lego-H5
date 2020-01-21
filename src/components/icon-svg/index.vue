@@ -9,9 +9,15 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 export default class IconSvg extends Vue {
   @Prop(String) private iconClass!: string;
   get iconName(): string {
-    console.log("x", this.iconClass);
     return `#icon-${this.iconClass}`;
   }
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.icon-svg {
+  width: 2em;
+  height: 2em;
+  fill: currentColor;
+  overflow: hidden;
+}
+</style>
