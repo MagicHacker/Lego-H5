@@ -1,5 +1,5 @@
 <template>
-  <el-main>Main</el-main>
+  <el-aside>Aside</el-aside>
 </template>
 <script lang="ts">
 import Vue from "vue";
