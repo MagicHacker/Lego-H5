@@ -1,22 +1,18 @@
 <template>
   <div class="main-page-wrap">
-    <el-container>
-      <lego-header></lego-header>
-      <el-container>
-        <aside-page></aside-page>
-        <home-page></home-page>
-      </el-container>
-    </el-container>
+    <lego-header></lego-header>
+    <aside-page></aside-page>
+    <works-page></works-page>
   </div>
 </template>
 <script lang="ts">
-import homePage from "../home-page/index.vue";
+import worksPage from "../works-page/index.vue";
 import legoHeader from "../../components/lego-header/index.vue";
 import asidePage from "../../components/aside-page/index.vue";
 import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {
-    homePage,
+    worksPage,
     legoHeader,
     asidePage
   }

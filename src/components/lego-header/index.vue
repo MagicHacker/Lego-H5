@@ -1,5 +1,5 @@
 <template>
-  <el-header class="main-page-header">
+  <div class="main-page-header">
     <div class="header-logo">
       <icon-svg :icon-class="iconClass"></icon-svg>
       Lego H5
@@ -15,7 +15,7 @@
         </div>
       </el-popover>
     </div>
-  </el-header>
+  </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -31,6 +31,7 @@ export default class LegoHeader extends Vue {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
+  padding: 0px 20px;
   .header-logo {
     height: 100%;
     display: flex;
