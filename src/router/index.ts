@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../views/login/index.vue";
 import mainPage from "../views/main-page/index.vue";
+import worksPage from "../views/works-page/index.vue";
+import templatePage from "../views/template-page/index.vue";
+import personalCenter from "../views/personal-center/index.vue";
 Vue.use(VueRouter);
 
 const routes: any = [
@@ -13,7 +16,21 @@ const routes: any = [
   {
     path: "/mainPage",
     name: "mainPage",
-    component: mainPage
+    component: mainPage,
+    children: [
+      {
+        path: "worksPage",
+        component: worksPage
+      },
+      {
+        path: "templatePage",
+        component: templatePage
+      },
+      {
+        path: "personalCenter",
+        component: personalCenter
+      }
+    ]
   },
   {
     path: "",

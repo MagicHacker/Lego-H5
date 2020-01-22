@@ -2,17 +2,15 @@
   <div class="main-page-wrap">
     <lego-header></lego-header>
     <aside-page></aside-page>
-    <works-page></works-page>
+    <router-view></router-view>
   </div>
 </template>
 <script lang="ts">
-import worksPage from "../works-page/index.vue";
 import legoHeader from "../../components/lego-header/index.vue";
 import asidePage from "../../components/aside-page/index.vue";
 import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {
-    worksPage,
     legoHeader,
     asidePage
   }
