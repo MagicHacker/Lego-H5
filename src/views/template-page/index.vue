@@ -1,13 +1,12 @@
 <template>
-  <div class="works-page-wrap">我的作品页</div>
+  <div class="template-page-wrap">我的模板</div>
 </template>
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({});
 </script>
 <style lang="less" scoped>
-.works-page-wrap {
-  float: left;
+.template-page-wrap {
   background-color: #f0f3f4;
 }
 </style>

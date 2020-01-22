@@ -1,13 +1,12 @@
 <template>
-  <div class="works-page-wrap">我的作品页</div>
+  <div class="personal-center-wrap">个人中心</div>
 </template>
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({});
 </script>
 <style lang="less" scoped>
-.works-page-wrap {
-  float: left;
+.personal-center-wrap {
   background-color: #f0f3f4;
 }
 </style>
