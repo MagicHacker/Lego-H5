@@ -16,7 +16,10 @@ import {
   Main,
   Row,
   Col,
-  Popover
+  Popover,
+  Menu,
+  MenuItem,
+  Submenu
 } from "element-ui";
 [
   Button,
@@ -29,7 +32,10 @@ import {
   Main,
   Row,
   Col,
-  Popover
+  Popover,
+  Menu,
+  MenuItem,
+  Submenu
 ].forEach(item => {
   Vue.use(item);
 });
