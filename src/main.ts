@@ -19,7 +19,9 @@ import {
   Popover,
   Menu,
   MenuItem,
-  Submenu
+  Submenu,
+  Tabs,
+  TabPane
 } from "element-ui";
 [
   Button,
@@ -35,7 +37,9 @@ import {
   Popover,
   Menu,
   MenuItem,
-  Submenu
+  Submenu,
+  Tabs,
+  TabPane
 ].forEach(item => {
   Vue.use(item);
 });
