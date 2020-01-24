@@ -1,9 +1,17 @@
 <template>
-  <div class="works-page-wrap">我的作品页</div>
+  <div class="works-page-wrap">
+    <tabs-page></tabs-page>
+  </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({});
+import { Component, Vue } from "vue-property-decorator";
+import tabsPage from "../../components/tabs-page/index.vue";
+@Component({
+  components: {
+    tabsPage
+  }
+})
+export default class WorksPage extends Vue {}
 </script>
 <style lang="less" scoped>
 .works-page-wrap {
