@@ -19,7 +19,7 @@ export default class AsidePage extends Vue {
 <style lang="less" scoped>
 .aside-page-wrap {
   width: 200px;
-  height: 100%;
+  height: calc(100% - 51px);
   float: left;
   /deep/ .el-menu {
     height: 100%;
