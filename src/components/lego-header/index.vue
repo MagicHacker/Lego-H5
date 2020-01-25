@@ -1,8 +1,7 @@
 <template>
   <div class="main-page-header">
     <div class="header-logo">
-      <icon-svg :icon-class="iconClass"></icon-svg>
-      Lego H5
+      <icon-svg :icon-class="iconClass"></icon-svg>Lego H5
     </div>
     <div class="header-person">
       <el-popover placement="bottom" width="100px" trigger="hover">
@@ -11,7 +10,7 @@
           <li>退出登录</li>
         </ul>
         <div slot="reference">
-          <img src="../../assets/images/joker.jpeg" alt="" />
+          <img src="../../assets/images/joker.jpeg" alt />
         </div>
       </el-popover>
     </div>
@@ -31,6 +30,7 @@ export default class LegoHeader extends Vue {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
+  background-color: #fff;
   padding: 0px 20px;
   .header-logo {
     height: 100%;

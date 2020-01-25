@@ -21,6 +21,7 @@ export default class MainPage extends Vue {}
 .main-page-wrap {
   width: 100%;
   height: 100%;
+  background-color: #f0f3f4;
   /deep/ .el-container {
     flex-direction: column;
   }

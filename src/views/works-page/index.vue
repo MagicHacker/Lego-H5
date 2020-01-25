@@ -16,6 +16,5 @@ export default class WorksPage extends Vue {}
 <style lang="less" scoped>
 .works-page-wrap {
   overflow: hidden;
-  background-color: #f0f3f4;
 }
 </style>

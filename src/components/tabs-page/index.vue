@@ -18,4 +18,8 @@ export default class TabsPage extends Vue {
   }
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+/deep/ .el-tabs__header {
+  background-color: #fff;
+}
+</style>
