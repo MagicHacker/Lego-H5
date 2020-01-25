@@ -15,7 +15,7 @@ export default class WorksPage extends Vue {}
 </script>
 <style lang="less" scoped>
 .works-page-wrap {
-  float: left;
+  overflow: hidden;
   background-color: #f0f3f4;
 }
 </style>
