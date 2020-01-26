@@ -4,15 +4,13 @@
       <icon-svg :icon-class="iconClass"></icon-svg>Lego H5
     </div>
     <div class="header-person">
-      <el-popover placement="bottom" width="100px" trigger="hover">
-        <ul class="header-person-menu">
-          <li>个人中心</li>
-          <li>退出登录</li>
-        </ul>
-        <div slot="reference">
-          <img src="../../assets/images/joker.jpeg" alt />
-        </div>
-      </el-popover>
+      <el-dropdown @command="switchCommand">
+        <img src="../../assets/images/joker.jpeg" alt />
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="personal-center">个人中心</el-dropdown-item>
+          <el-dropdown-item command="sign-out">退出登录</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
     </div>
   </div>
 </template>
@@ -21,6 +19,13 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class LegoHeader extends Vue {
   iconClass: string = "lego";
+  switchCommand(command: string) {
+    if (command === "personal-center") {
+      this.$router.push({ path: "/mainPage/personalCenter" }).catch(err => {});
+    } else if (command === "sign-out") {
+      this.$router.push({ path: "/login" }).catch(err => {});
+    }
+  }
 }
 </script>
 <style lang="less" scoped>
