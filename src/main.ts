@@ -21,7 +21,10 @@ import {
   MenuItem,
   Submenu,
   Tabs,
-  TabPane
+  TabPane,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 } from "element-ui";
 [
   Button,
@@ -39,7 +42,10 @@ import {
   MenuItem,
   Submenu,
   Tabs,
-  TabPane
+  TabPane,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 ].forEach(item => {
   Vue.use(item);
 });
