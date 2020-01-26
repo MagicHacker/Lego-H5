@@ -1,6 +1,6 @@
 <template>
   <div class="main-page-header">
-    <div class="header-logo">
+    <div class="header-logo" @click="goToWorksPage">
       <icon-svg :icon-class="iconClass"></icon-svg>Lego H5
     </div>
     <div class="header-person">
@@ -19,12 +19,16 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class LegoHeader extends Vue {
   iconClass: string = "lego";
-  switchCommand(command: string) {
+  switchCommand(command: string): void {
     if (command === "personal-center") {
       this.$router.push({ path: "/mainPage/personalCenter" }).catch(err => {});
     } else if (command === "sign-out") {
       this.$router.push({ path: "/login" }).catch(err => {});
     }
+  }
+  // 返回首页
+  goToWorksPage(): void {
+    this.$router.push({ path: "/mainPage/worksPage" });
   }
 }
 </script>
