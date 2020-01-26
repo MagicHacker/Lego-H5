@@ -1,12 +1,20 @@
 <template>
-  <div class="template-page-wrap">我的模板</div>
+  <div class="template-page-wrap">
+    <tabs-page></tabs-page>
+  </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({});
+import tabsPage from "../../components/tabs-page/index.vue";
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  components: {
+    tabsPage
+  }
+})
+export default class TemplatePage extends Vue {}
 </script>
 <style lang="less" scoped>
 .template-page-wrap {
-  background-color: #f0f3f4;
+  overflow: hidden;
 }
 </style>

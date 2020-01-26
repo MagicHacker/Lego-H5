@@ -1,7 +1,11 @@
 <template>
   <el-tabs v-model="activeTab" @tab-click="changeTab">
-    <el-tab-pane label="H5" name="1">H5</el-tab-pane>
-    <el-tab-pane label="长页H5" name="2">长页H5</el-tab-pane>
+    <el-tab-pane name="1">
+      <div slot="label" class="tabs-item">H5</div>H5
+    </el-tab-pane>
+    <el-tab-pane label="长页H5" name="2">
+      <div slot="label" class="tabs-item">长页H5</div>长页H5
+    </el-tab-pane>
   </el-tabs>
 </template>
 <script lang="ts">
@@ -21,5 +25,9 @@ export default class TabsPage extends Vue {
 <style lang="less" scoped>
 /deep/ .el-tabs__header {
   background-color: #fff;
+  padding: 0px 20px;
+}
+.tabs-item {
+  width: 50px;
 }
 </style>
