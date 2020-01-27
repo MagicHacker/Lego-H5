@@ -2,7 +2,7 @@
   <div class="works-page-wrap">
     <tabs-page>
       <template v-slot:blank>
-        <blank-template></blank-template>
+        <content-template></content-template>
       </template>
     </tabs-page>
   </div>
@@ -11,10 +11,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import tabsPage from "../../components/tabs-page/index.vue";
 import blankTemplate from "../../components/blank-template/index.vue";
+import contentTemplate from "../../components/content-template/index.vue";
 @Component({
   components: {
     tabsPage,
-    blankTemplate
+    blankTemplate,
+    contentTemplate
   }
 })
 export default class WorksPage extends Vue {}
