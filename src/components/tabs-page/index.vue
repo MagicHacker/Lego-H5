@@ -25,7 +25,9 @@ export default class TabsPage extends Vue {
 <style lang="less" scoped>
 /deep/ .el-tabs__header {
   background-color: #fff;
-  padding: 0px 20px;
+  .el-tabs__nav-wrap {
+    padding: 0px 20px;
+  }
 }
 .tabs-item {
   width: 50px;
