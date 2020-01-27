@@ -1,5 +1,5 @@
 <template>
-  <div class="blank-tpl-wrap">
+  <div class="blank-tpl-wrap" @click="createPage">
     <div class="blank-tpl-item">
       <icon-svg icon-class="create"></icon-svg>
       <p>创建H5</p>
@@ -8,7 +8,12 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-export default class blankTemplate extends Vue {}
+@Component
+export default class blankTemplate extends Vue {
+  createPage(): void {
+    alert(1);
+  }
+}
 </script>
 <style lang="less" scoped>
 .blank-tpl-wrap {
