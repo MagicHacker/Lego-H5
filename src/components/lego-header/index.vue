@@ -28,7 +28,7 @@ export default class LegoHeader extends Vue {
   }
   // 返回首页
   goToWorksPage(): void {
-    this.$router.push({ path: "/mainPage/worksPage" });
+    this.$router.push({ path: "/mainPage/worksPage" }).catch(err => {});
   }
 }
 </script>
