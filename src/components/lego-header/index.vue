@@ -7,7 +7,9 @@
       <el-dropdown @command="switchCommand">
         <img src="../../assets/images/joker.jpeg" alt />
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item command="personal-center">个人中心</el-dropdown-item>
+          <el-dropdown-item command="personal-center"
+            >个人中心</el-dropdown-item
+          >
           <el-dropdown-item command="sign-out">退出登录</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>

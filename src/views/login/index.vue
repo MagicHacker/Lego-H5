@@ -1,7 +1,12 @@
 <template>
   <div class="lego-login-wrap">
     <div class="lego-login-area">
-      <el-form :model="formData" label-width="70px" :rules="rules" label-position="left">
+      <el-form
+        :model="formData"
+        label-width="70px"
+        :rules="rules"
+        label-position="left"
+      >
         <el-form-item label="用户名" prop="username">
           <el-input v-model="formData.username"></el-input>
         </el-form-item>

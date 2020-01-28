@@ -15,12 +15,12 @@
   </el-tabs>
 </template>
 <script lang="ts">
-import blankTemplate from '../blank-template/index.vue'
-import contentTemplate from '../content-template/index.vue'
-import { Component, Vue } from 'vue-property-decorator'
+import blankTemplate from "../blank-template/index.vue";
+import contentTemplate from "../content-template/index.vue";
+import { Component, Vue } from "vue-property-decorator";
 // 定义ts接口interface
 interface Tabs {
-  name: string
+  name: string;
 }
 @Component({
   components: {
@@ -29,9 +29,9 @@ interface Tabs {
   }
 })
 export default class TabsPage extends Vue {
-  activeTab: string = '1'
+  activeTab: string = "1";
   changeTab(tab: Tabs): void {
-    this.activeTab = tab.name
+    this.activeTab = tab.name;
   }
 }
 </script>
