@@ -19,13 +19,14 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import tabsPage from '../../components/tabs-page/index.vue'
-import blankTemplate from '../../components/blank-template/index.vue'
-import contentTemplate from '../../components/content-template/index.vue'
+import { generateUUid } from "../../utils/utils";
+import { Component, Vue } from "vue-property-decorator";
+import tabsPage from "../../components/tabs-page/index.vue";
+import blankTemplate from "../../components/blank-template/index.vue";
+import contentTemplate from "../../components/content-template/index.vue";
 // 活动页接口
 interface actPage {
-  id: string
+  id: string;
 }
 @Component({
   components: {
@@ -36,26 +37,26 @@ interface actPage {
 })
 export default class WorksPage extends Vue {
   // H5数组
-  listH: Array<actPage> = []
-  listLongH: Array<actPage> = []
+  listH: Array<actPage> = [];
+  listLongH: Array<actPage> = [];
   createPage(name: string): void {
-    if (name === '长页') {
-      this.createLongH()
+    if (name === "长页") {
+      this.createLongH();
     } else {
-      this.createH()
+      this.createH();
     }
   }
   // 创建H5
   createH(): void {
     this.listH.push({
-      id: '1'
-    })
+      id: generateUUid()
+    });
   }
   // 创建长页H5
   createLongH(): void {
     this.listLongH.push({
-      id: '2'
-    })
+      id: generateUUid()
+    });
   }
 }
 </script>
