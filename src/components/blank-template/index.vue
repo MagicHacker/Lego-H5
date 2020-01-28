@@ -2,14 +2,15 @@
   <div class="blank-tpl-wrap" @click="createPage">
     <div class="blank-tpl-item">
       <icon-svg icon-class="create"></icon-svg>
-      <p>创建H5</p>
+      <p>{{ name }}</p>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 @Component
 export default class blankTemplate extends Vue {
+  @Prop(String) name!: string;
   createPage(): void {
     alert(1);
   }

@@ -2,11 +2,11 @@
   <div class="works-page-wrap">
     <tabs-page>
       <template v-slot:H5>
-        <blank-template></blank-template>
+        <blank-template name="创建H5"></blank-template>
         <content-template v-for="item in 10" :key="item"></content-template>
       </template>
       <template v-slot:longH5>
-        <blank-template></blank-template>
+        <blank-template name="创建长页H5"></blank-template>
         <content-template v-for="item in 10" :key="item"></content-template>
       </template>
     </tabs-page>
