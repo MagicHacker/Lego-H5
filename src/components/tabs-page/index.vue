@@ -3,24 +3,32 @@
     <el-tab-pane name="1">
       <div slot="label" class="tabs-item">H5</div>
       <div class="tabs-pane-wrap">
-        <slot name="blank">插槽后备内容</slot>
-        <slot name="content">插槽后备内容</slot>
+        <blank-template></blank-template>
+        <content-template v-for="item in 10" :key="item"></content-template>
       </div>
     </el-tab-pane>
     <el-tab-pane label="长页H5" name="2">
       <div slot="label" class="tabs-item">长页H5</div>
-      <slot name="blank">插槽后备内容</slot>
+      <div class="tabs-pane-wrap">
+        <blank-template></blank-template>
+        <content-template v-for="item in 10" :key="item"></content-template>
+      </div>
     </el-tab-pane>
   </el-tabs>
 </template>
 <script lang="ts">
+import blankTemplate from "../blank-template/index.vue";
+import contentTemplate from "../content-template/index.vue";
 import { Component, Vue } from "vue-property-decorator";
 // 定义ts接口interface
 interface Tabs {
   name: string;
 }
 @Component({
-  components: {}
+  components: {
+    blankTemplate,
+    contentTemplate
+  }
 })
 export default class TabsPage extends Vue {
   activeTab: string = "1";
