@@ -2,10 +2,14 @@
   <el-tabs v-model="activeTab" @tab-click="changeTab">
     <el-tab-pane name="1">
       <div slot="label" class="tabs-item">H5</div>
-      <slot name="blank">插槽后备内容</slot>
+      <div class="tabs-pane-wrap">
+        <slot name="blank">插槽后备内容</slot>
+        <slot name="content">插槽后备内容</slot>
+      </div>
     </el-tab-pane>
     <el-tab-pane label="长页H5" name="2">
-      <div slot="label" class="tabs-item">长页H5</div>长页H5
+      <div slot="label" class="tabs-item">长页H5</div>
+      <slot name="blank">插槽后备内容</slot>
     </el-tab-pane>
   </el-tabs>
 </template>
@@ -38,5 +42,9 @@ export default class TabsPage extends Vue {
 }
 .tabs-item {
   width: 50px;
+}
+.tabs-pane-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

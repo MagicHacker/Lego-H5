@@ -2,7 +2,10 @@
   <div class="works-page-wrap">
     <tabs-page>
       <template v-slot:blank>
-        <content-template></content-template>
+        <blank-template></blank-template>
+      </template>
+      <template v-slot:content>
+        <content-template v-for="item in 10" :key="item"></content-template>
       </template>
     </tabs-page>
   </div>
