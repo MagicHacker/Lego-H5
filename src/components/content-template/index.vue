@@ -34,6 +34,7 @@ export default class contentTemplate extends Vue {}
   cursor: pointer;
   border-radius: 4px;
   font-size: 12px;
+  margin: 0px 30px 20px 0px;
   &:hover {
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
     transform: translate3d(0, -2px, 0);

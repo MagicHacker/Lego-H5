@@ -25,6 +25,7 @@ export default class blankTemplate extends Vue {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px 30px 20px 0px;
   &:hover {
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
     transform: translate3d(0, -2px, 0);
