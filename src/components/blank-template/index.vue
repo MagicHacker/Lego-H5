@@ -2,7 +2,7 @@
   <div class="blank-tpl-wrap" @click="createPage">
     <div class="blank-tpl-item">
       <icon-svg icon-class="create"></icon-svg>
-      <p>{{ name }}</p>
+      <p>创建{{ name }}H5</p>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 export default class blankTemplate extends Vue {
   @Prop(String) name!: string;
   createPage(): void {
-    alert(1);
+    this.$emit("createPage", this.name);
   }
 }
 </script>

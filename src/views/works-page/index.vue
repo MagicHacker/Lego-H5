@@ -2,11 +2,11 @@
   <div class="works-page-wrap">
     <tabs-page>
       <template v-slot:H5>
-        <blank-template name="创建H5"></blank-template>
+        <blank-template @createPage="createPage"></blank-template>
         <content-template v-for="item in 10" :key="item"></content-template>
       </template>
       <template v-slot:longH5>
-        <blank-template name="创建长页H5"></blank-template>
+        <blank-template name="长页" @createPage="createPage"></blank-template>
         <content-template v-for="item in 10" :key="item"></content-template>
       </template>
     </tabs-page>
@@ -24,7 +24,23 @@ import contentTemplate from "../../components/content-template/index.vue";
     contentTemplate
   }
 })
-export default class WorksPage extends Vue {}
+export default class WorksPage extends Vue {
+  createPage(name: string): void {
+    if (name === "长页") {
+      this.createLongH();
+    } else {
+      this.createH();
+    }
+  }
+  // 创建H5
+  createH(): void {
+    alert("创建H5");
+  }
+  // 创建长页H5
+  createLongH(): void {
+    alert("创建长页H5");
+  }
+}
 </script>
 <style lang="less" scoped>
 .works-page-wrap {
