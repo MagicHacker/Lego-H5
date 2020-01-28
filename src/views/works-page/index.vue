@@ -1,10 +1,12 @@
 <template>
   <div class="works-page-wrap">
     <tabs-page>
-      <template v-slot:blank>
+      <template v-slot:H5>
         <blank-template></blank-template>
+        <content-template v-for="item in 10" :key="item"></content-template>
       </template>
-      <template v-slot:content>
+      <template v-slot:longH5>
+        <blank-template></blank-template>
         <content-template v-for="item in 10" :key="item"></content-template>
       </template>
     </tabs-page>
