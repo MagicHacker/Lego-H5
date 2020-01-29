@@ -7,12 +7,14 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class blankTemplate extends Vue {
-  @Prop(String) name!: string;
+  @Prop(String) name!: string
   createPage(): void {
-    this.$emit("createPage", this.name);
+    // 跳转到编辑页面
+    this.$router.push({ path: '/editorPage' })
+    this.$emit('createPage', this.name)
   }
 }
 </script>
