@@ -3,7 +3,7 @@
     <div class="content-tpl-cover">
       <img src="../../assets/images/login-bg.png" alt />
     </div>
-    <div class="content-tpl-name">未命名</div>
+    <div class="content-tpl-name">{{ itemId }}</div>
     <div class="content-tpl-operation">
       <div>编辑</div>
       <div>复制</div>
@@ -15,16 +15,22 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>复制为模板</el-dropdown-item>
           <el-dropdown-item>上传封面</el-dropdown-item>
-          <el-dropdown-item>删除</el-dropdown-item>
+          <el-dropdown-item @click.native="deleteItem">删除</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 @Component
-export default class contentTemplate extends Vue {}
+export default class contentTemplate extends Vue {
+  @Prop(String) itemId!: string;
+  // 删除功能
+  deleteItem(): void {
+    this.$emit("deleteContent", this.itemId);
+  }
+}
 </script>
 <style lang="less" scoped>
 .content-tpl-wrap {

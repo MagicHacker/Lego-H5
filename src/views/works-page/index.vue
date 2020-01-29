@@ -6,6 +6,8 @@
         <content-template
           v-for="item in listH"
           :key="item.id"
+          :itemId="item.id"
+          @deleteContent="deleteItem"
         ></content-template>
       </template>
       <template v-slot:longH5>
@@ -13,6 +15,8 @@
         <content-template
           v-for="item in listLongH"
           :key="item.id"
+          :itemId="item.id"
+          @deleteContent="deleteLongItem"
         ></content-template>
       </template>
     </tabs-page>
@@ -57,6 +61,52 @@ export default class WorksPage extends Vue {
     this.listLongH.push({
       id: generateUUid()
     });
+  }
+  // 删除模板
+  deleteItem(itemId: string): void {
+    this.$confirm("是否删除?", "提示", {
+      confirmButtonText: "确认",
+      cancelButtonText: "取消"
+    })
+      .then(() => {
+        this.listH.splice(
+          this.listH.findIndex(item => item.id === itemId),
+          1
+        );
+        this.$message({
+          type: "success",
+          message: "删除成功"
+        });
+      })
+      .catch(() => {
+        this.$message({
+          type: "info",
+          message: "取消删除"
+        });
+      });
+  }
+  // 删除长页模板
+  deleteLongItem(itemId: string): void {
+    this.$confirm("是否删除?", "提示", {
+      confirmButtonText: "确认",
+      cancelButtonText: "取消"
+    })
+      .then(() => {
+        this.listLongH.splice(
+          this.listLongH.findIndex(item => item.id === itemId),
+          1
+        );
+        this.$message({
+          type: "success",
+          message: "删除成功"
+        });
+      })
+      .catch(() => {
+        this.$message({
+          type: "info",
+          message: "取消删除"
+        });
+      });
   }
 }
 </script>

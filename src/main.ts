@@ -24,7 +24,8 @@ import {
   TabPane,
   Dropdown,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  MessageBox
 } from "element-ui";
 [
   Button,
@@ -49,6 +50,7 @@ import {
 ].forEach(item => {
   Vue.use(item);
 });
+Vue.prototype.$confirm = MessageBox.confirm;
 Vue.prototype.$message = Message;
 Vue.config.productionTip = false;
 
