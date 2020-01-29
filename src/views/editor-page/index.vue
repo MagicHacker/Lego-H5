@@ -2,8 +2,7 @@
   <div class="editor-page-wrap">
     <lego-header></lego-header>
     <el-row>
-      <el-col :span="2"><editor-aside></editor-aside></el-col>
-      <el-col :span="3"><editor-second-aside></editor-second-aside></el-col>
+      <el-col :span="5"><editor-aside></editor-aside></el-col>
       <el-col :span="13"><editor-center-page></editor-center-page></el-col>
       <el-col :span="6"><editor-right-panel></editor-right-panel></el-col>
     </el-row>
@@ -12,7 +11,6 @@
 <script lang="ts">
 import editorRightPanel from '../editor-right-panel/index.vue'
 import editorCenterPage from '../editor-center-page/index.vue'
-import editorSecondAside from '../editor-second-aside/index.vue'
 import editorAside from '../editor-aside/index.vue'
 import { Component, Vue } from 'vue-property-decorator'
 import legoHeader from '../../components/lego-header/index.vue'
@@ -20,7 +18,6 @@ import legoHeader from '../../components/lego-header/index.vue'
   components: {
     legoHeader,
     editorAside,
-    editorSecondAside,
     editorCenterPage,
     editorRightPanel
   }
