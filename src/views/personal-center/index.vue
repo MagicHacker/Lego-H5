@@ -18,7 +18,7 @@
       <el-form-item label="新密码" prop="newPassword">
         <el-input v-model="formData.newPassword"></el-input>
       </el-form-item>
-      <el-form-item label="上传头像">
+      <el-form-item label="头像">
         <el-upload
           action="https://jsonplaceholder.typicode.com/posts/"
           :on-success="uploadAvatarSuccess"
