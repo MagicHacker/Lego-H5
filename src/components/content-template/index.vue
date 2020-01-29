@@ -15,6 +15,7 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>复制为模板</el-dropdown-item>
           <el-dropdown-item>上传封面</el-dropdown-item>
+          <el-dropdown-item>预览</el-dropdown-item>
           <el-dropdown-item @click.native="deleteItem">删除</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -22,13 +23,13 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class contentTemplate extends Vue {
-  @Prop(String) itemId!: string;
+  @Prop(String) itemId!: string
   // 删除功能
   deleteItem(): void {
-    this.$emit("deleteContent", this.itemId);
+    this.$emit('deleteContent', this.itemId)
   }
 }
 </script>
