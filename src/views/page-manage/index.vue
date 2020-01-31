@@ -5,7 +5,11 @@
     </div>
     <div class="page-manage-area">
       <el-scrollbar tag="ul" :native="false">
-        <li v-for="(item, index) in pageList" :key="item.pageId">
+        <li
+          v-for="(item, index) in pageList"
+          :key="item.pageId"
+          @click="selectItem(index)"
+        >
           <div class="page-number">
             <span>第{{ index + 1 }}页</span>
           </div>
@@ -47,6 +51,10 @@ export default class PageManage extends Vue {
   // 删除页面
   deletePage(index: number): void {
     this.pageList.splice(index, 1)
+  }
+  // 选中页面
+  selectItem(index: number): void {
+    alert(index + 1)
   }
 }
 </script>
