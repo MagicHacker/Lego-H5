@@ -34,6 +34,12 @@ export default class EditorAside extends Vue {}
   background-color: #fff;
   /deep/ .el-tabs {
     height: 100%;
+    .el-tabs__content {
+      height: 100%;
+      .el-tab-pane {
+        height: 100%;
+      }
+    }
   }
 }
 </style>
