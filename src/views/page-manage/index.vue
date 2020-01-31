@@ -5,16 +5,18 @@
     </div>
     <div class="page-manage-area">
       <el-scrollbar tag="ul" :native="false">
-        <li v-for="item in 10" :key="item">
+        <li v-for="(item, index) in pageList" :key="item.pageId">
           <div class="page-number">
-            <span>第{{ item }}页</span>
+            <span>第{{ index + 1 }}页</span>
           </div>
           <div class="page-operation">
             <el-dropdown>
               <i class="el-icon-more-outline"></i>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item>复制页面</el-dropdown-item>
-                <el-dropdown-item>删除页面</el-dropdown-item>
+                <el-dropdown-item @click.native="deletePage(index)"
+                  >删除页面</el-dropdown-item
+                >
               </el-dropdown-menu>
             </el-dropdown>
           </div>
@@ -22,14 +24,31 @@
       </el-scrollbar>
     </div>
     <div class="page-manage-add">
-      <el-button type="primary">新增页面</el-button>
+      <el-button type="primary" @click="addPage">新增页面</el-button>
     </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { generateUUid } from '../../utils/utils'
+// 构建接口
+interface pages {
+  pageId: string
+}
 @Component
-export default class PageManage extends Vue {}
+export default class PageManage extends Vue {
+  pageList: Array<pages> = [{ pageId: generateUUid() }]
+  // 新增页面
+  addPage(): void {
+    this.pageList.push({
+      pageId: generateUUid()
+    })
+  }
+  // 删除页面
+  deletePage(index: number): void {
+    this.pageList.splice(index, 1)
+  }
+}
 </script>
 <style lang="less" scoped>
 .page-manage-wrap {
