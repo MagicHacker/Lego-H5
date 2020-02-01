@@ -27,7 +27,8 @@ import {
   DropdownItem,
   MessageBox,
   Upload,
-  Scrollbar
+  Scrollbar,
+  ColorPicker
 } from 'element-ui'
 ;[
   Button,
@@ -50,7 +51,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Upload,
-  Scrollbar
+  Scrollbar,
+  ColorPicker
 ].forEach(item => {
   Vue.use(item)
 })
