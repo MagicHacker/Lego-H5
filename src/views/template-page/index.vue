@@ -1,14 +1,25 @@
 <template>
   <div class="template-page-wrap">
-    <tabs-page></tabs-page>
+    <tabs-page>
+      <template v-slot:H5>
+        <content-template></content-template>
+      </template>
+      <template v-slot:longH5>
+        <content-template></content-template>
+      </template>
+    </tabs-page>
   </div>
 </template>
 <script lang="ts">
 import tabsPage from "../../components/tabs-page/index.vue";
 import { Component, Vue } from "vue-property-decorator";
+import blankTemplate from "../../components/blank-template/index.vue";
+import contentTemplate from "../../components/content-template/index.vue";
 @Component({
   components: {
-    tabsPage
+    tabsPage,
+    blankTemplate,
+    contentTemplate
   }
 })
 export default class TemplatePage extends Vue {}
