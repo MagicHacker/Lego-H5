@@ -1,7 +1,7 @@
 <template>
   <div class="personal-center-wrap">
     <div class="personal-center-avatar">
-      <img :src="imgUrl" alt="" />
+      <img :src="imgUrl" alt />
     </div>
     <el-form
       :model="formData"
@@ -34,19 +34,19 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class PersonalCenter extends Vue {
   // 头像地址
-  imgUrl: string = ''
+  imgUrl: string = "";
   formData = {
-    username: '',
-    oldPassword: '',
-    newPassword: ''
-  }
+    username: "",
+    oldPassword: "",
+    newPassword: ""
+  };
   // 头像上传成功
   uploadAvatarSuccess(res: any, file: any): void {
-    this.imgUrl = URL.createObjectURL(file.raw)
+    this.imgUrl = URL.createObjectURL(file.raw);
   }
 }
 </script>
@@ -61,7 +61,7 @@ export default class PersonalCenter extends Vue {
   .personal-center-avatar {
     width: 80px;
     height: 80px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     img {
       width: 100%;
       height: 100%;
