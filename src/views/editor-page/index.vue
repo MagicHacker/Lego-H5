@@ -9,11 +9,11 @@
   </div>
 </template>
 <script lang="ts">
-import editorRightPanel from '../editor-right-panel/index.vue'
-import editorCenterPage from '../editor-center-page/index.vue'
-import editorAside from '../editor-aside/index.vue'
-import { Component, Vue } from 'vue-property-decorator'
-import legoHeader from '../../components/lego-header/index.vue'
+import editorRightPanel from "../editor-right-panel/index.vue";
+import editorCenterPage from "../editor-center-page/index.vue";
+import editorAside from "../editor-aside/index.vue";
+import { Component, Vue } from "vue-property-decorator";
+import legoHeader from "../../components/lego-header/index.vue";
 @Component({
   components: {
     legoHeader,

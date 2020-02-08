@@ -14,10 +14,10 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import componentLists from '../component-lists/index.vue'
-import pageManage from '../page-manage/index.vue'
-import templateLib from '../template-lib/index.vue'
+import { Component, Vue } from "vue-property-decorator";
+import componentLists from "../component-lists/index.vue";
+import pageManage from "../page-manage/index.vue";
+import templateLib from "../template-lib/index.vue";
 @Component({
   components: {
     componentLists,

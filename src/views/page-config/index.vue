@@ -24,18 +24,18 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class PageConfig extends Vue {
   pageData = {
     width: 375,
     height: 667,
-    pageColor: '#409EFF',
-    pageImage: ''
-  }
+    pageColor: "#409EFF",
+    pageImage: ""
+  };
   // 背景图上传
   uploadPageImage(res: any, file: any) {
-    this.pageData.pageImage = URL.createObjectURL(file.raw)
+    this.pageData.pageImage = URL.createObjectURL(file.raw);
   }
 }
 </script>

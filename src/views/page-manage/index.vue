@@ -33,28 +33,28 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { generateUUid } from '../../utils/utils'
+import { Component, Vue } from "vue-property-decorator";
+import { generateUUid } from "../../utils/utils";
 // 构建接口
 interface pages {
-  pageId: string
+  pageId: string;
 }
 @Component
 export default class PageManage extends Vue {
-  pageList: Array<pages> = [{ pageId: generateUUid() }]
+  pageList: Array<pages> = [{ pageId: generateUUid() }];
   // 新增页面
   addPage(): void {
     this.pageList.push({
       pageId: generateUUid()
-    })
+    });
   }
   // 删除页面
   deletePage(index: number): void {
-    this.pageList.splice(index, 1)
+    this.pageList.splice(index, 1);
   }
   // 选中页面
   selectItem(index: number): void {
-    alert(index + 1)
+    alert(index + 1);
   }
 }
 </script>

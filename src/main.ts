@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import IconSvg from './components/icon-svg/index.vue'
-import './utils/icon-svg.ts'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import IconSvg from "./components/icon-svg/index.vue";
+import "./utils/icon-svg.ts";
 import {
   Button,
   Form,
@@ -29,8 +29,8 @@ import {
   Upload,
   Scrollbar,
   ColorPicker
-} from 'element-ui'
-;[
+} from "element-ui";
+[
   Button,
   Form,
   FormItem,
@@ -54,16 +54,16 @@ import {
   Scrollbar,
   ColorPicker
 ].forEach(item => {
-  Vue.use(item)
-})
-Vue.prototype.$confirm = MessageBox.confirm
-Vue.prototype.$message = Message
-Vue.config.productionTip = false
+  Vue.use(item);
+});
+Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$message = Message;
+Vue.config.productionTip = false;
 
 // 全局注册svg组件
-Vue.component('icon-svg', IconSvg)
+Vue.component("icon-svg", IconSvg);
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount("#app");

@@ -23,13 +23,13 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Component, Vue, Prop } from "vue-property-decorator";
 @Component
 export default class contentTemplate extends Vue {
-  @Prop(String) itemId!: string
+  @Prop(String) itemId!: string;
   // 删除功能
   deleteItem(): void {
-    this.$emit('deleteContent', this.itemId)
+    this.$emit("deleteContent", this.itemId);
   }
 }
 </script>

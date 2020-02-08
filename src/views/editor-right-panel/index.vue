@@ -12,8 +12,8 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import pageConfig from '../page-config/index.vue'
+import { Component, Vue } from "vue-property-decorator";
+import pageConfig from "../page-config/index.vue";
 @Component({
   components: {
     pageConfig
