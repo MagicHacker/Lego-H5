@@ -65,6 +65,7 @@ export default Vue.extend({});
     background-color: #fff;
     margin: 40px auto 20px;
     border: 1px solid #ccc;
+    position: relative;
   }
   .editor-header {
     width: 700px;
