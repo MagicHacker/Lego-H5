@@ -50,8 +50,23 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({});
+import { Component, Vue } from "vue-property-decorator";
+import Ruler from "../../lib/ruler/ruler";
+@Component
+export default class EditorCenter extends Vue {
+  mounted(): void {
+    // 初始化ruler
+    const ruler = new Ruler({
+      container: document.querySelector(".editor-center-wrap"),
+      rulerHeight: 15,
+      strokeStyle: "black",
+      lineWidth: 1,
+      enableMouseTracking: true,
+      enableToolTip: true
+    });
+    ruler.api.setPos({ x: 0, y: 0 });
+  }
+}
 </script>
 <style lang="less" scoped>
 .editor-center-wrap {
@@ -59,6 +74,11 @@ export default Vue.extend({});
   height: 100%;
   overflow: auto;
   position: relative;
+  .rul_wrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
   .editor-area {
     width: 375px;
     height: 667px;
