@@ -716,3 +716,6 @@ ruler.prototype.utils = {
     return element;
   }
 };
+
+// 导出ruler对象
+export default ruler;
